@@ -14,7 +14,7 @@ exports.create = (req, res) => {
         title: req.body.title || "No product title", 
         description: req.body.description,
         price: req.body.price,
-        count: req.body.count
+        quantity: req.body.quantity
     });
 
     // Save Product in the database
@@ -76,7 +76,7 @@ exports.update = (req, res) => {
         title: req.body.title || "No product title", 
         description: req.body.description,
         price: req.body.price,
-        company: req.body.company
+        quantity: req.body.quantity
     }, {new: true})
     .then(product => {
         if(!product) {
